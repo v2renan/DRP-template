@@ -1,0 +1,48 @@
+
+\subsection{Subsection}
+
+
+Example of a subsection. Equation below for illustration purposes.
+
+
+\begin{equation}
+    M=\left\{\begin{array}{l}
+        \dot{x}_{s}=f\left(x_{s}, u, d\right) \\
+        y=g\left(x_{s}, u, d\right) \\
+        h_{1}\left(\dot{x}_{s}, x_{s}, y, \dot{u}, u, d\right)=0 \\
+        h_{2}\left(\dot{x}_{s}, x_{s}, y, \dot{u}, u, d\right) \geq 0
+    \end{array}\right.
+    \label{eq:eq1}
+\end{equation}
+
+Example of a table.
+
+
+\begin{table}[H]
+    \caption{Steady-state operability sets: definitions and mathematical formulations.}
+    \label{tab:my-table1}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Operability Set}                                                                     & \textbf{Description}                                                                                                                                                                                                         & \textbf{Mathematical Formulation}                                                                                                                                                                                    \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Available \\ Input Set (AIS)\end{tabular}}                & \begin{tabular}[c]{@{}c@{}}Manipulated inputs ($ u \in \mathbb{R}^m$) \\ based on the design of the process that is limited \\ by the process constraints \cite{vinson00}.\end{tabular}                                              & $\mathrm{AIS}=\left\{u \mid u_{i}^{\min } \leq u_{i} \leq u_{i}^{\max } ; 1 \leq i \leq m\right\}$                                                                                                                   \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Expected \\ Disturbance \\ Set (EDS)\end{tabular}}        & \begin{tabular}[c]{@{}c@{}}Disturbance variables ($d \in \mathbb{R}^q$) that \\ can represent process uncertainties and variabilities.\end{tabular}                                                                                   & $\mathrm{EDS}=\left\{d \mid d_{i}^{\min } \leq d_{i} \leq d_{i}^{\max } ; 1 \leq i \leq q\right\}$                                                                                                                   \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Achievable \\ Output Set \\ (AOS)\end{tabular}}           & \begin{tabular}[c]{@{}c@{}}Range of the outputs ($y \in \mathbb{R}^n$) \\ that can be achieved using \\ the inputs inside the AIS and disturbances within the EDS.\end{tabular}                                                                                          & $\operatorname{AOS}(d)=\{y \mid y=M(u, d) ; u \in$ AIS, $d$ is fixed$\}$                                                                                                                                            \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Desired \\ Output Set \\ (DOS)\end{tabular}}              & \begin{tabular}[c]{@{}c@{}}Production/target/efficiency \\ requirements for the outputs that do not \\ necessarily meet the ranges of the AOS.\end{tabular}                                                                  & DOS $=\left\{y \mid y_{i}^{\min } \leq y_{i} \leq y_{i}^{\max } ; 1 \leq i \leq n\right\}$                                                                                                                           \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Desired \\ Input Set \\ (DIS)\end{tabular}}               & \begin{tabular}[c]{@{}c@{}}Set of inputs required to reach the entire DOS, \\ given a disturbance vector \textit{d}.\end{tabular}                                                                                           & $\operatorname{DIS}(d)=\left\{u \mid u=M^{-1}(y, d) ; y \in \mathrm{DOS}, d\right.$ is fixed$\}$                                                                                                                    \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Feasible \\ Desired \\ Output Set \\ (DOS*)\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Feasible set of desired outputs calculated via \\ relative error minimization \\ from the DOS using for example the \\ NLP-based approach \cite{carrasco2017}.\end{tabular}                  & $\mathrm{DOS}^{*}=\left\{y^{*} \mid y^{*}=M\left(u^{*}\right) ; u^{*} \in \mathrm{DIS}^{*}\right\}$                                                                                                                  \\ \hline
+    \textbf{\begin{tabular}[c]{@{}c@{}}Feasible \\ Desired \\ Input Set \\ (DIS*)\end{tabular}}  & \begin{tabular}[c]{@{}c@{}}Optimal set of inputs that are required to obtain the \\ Feasible Desired Output Set (DOS*), \\ calculated for example via the NLP-based approach.\end{tabular}                               & \begin{tabular}[c]{@{}c@{}}$\mathrm{DIS}^{*}=\left\{u^{*} \mid u^{*}=\left(u_{1}^{*}, u_{2}^{*}, u_{3}^{*} \ldots u_{i}^{*}\right)\right\}$\\ $i \stackrel{\text { def }}{=}$ Discretized DOS grid size\end{tabular} \\ \hline
+    \end{tabular}%
+    }
+\end{table}
+
+
+\subsection{Another subsection!}
+
+If you need several subsections, this might help you. Equation below as an example as well.
+
+
+\begin{equation}
+    \widehat{Y}_{l}(u)=\mathcal{F}(u)+z_{l}(u), \quad l=1, \ldots, p
+    \label{eq:kr1}
+\end{equation}

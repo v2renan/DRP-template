@@ -1,0 +1,71 @@
+\documentclass[10.5pt]{article}
+\usepackage{drp_preamble}
+
+
+
+\fancyhead{}
+\fancyhead[L]{DRP: Your name}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addbibresource{references.bib}
+
+\graphicspath{ {Images/} } % Tell the main.tex which directory to look for figures/ images
+
+\newtheorem{theorem}{Theorem} %[section]
+
+% Begin document
+\begin{document}
+% First page different, no numbering (Title page)
+\fancyfoot{}
+\pagenumbering{gobble}
+\pagestyle{plain}
+\input{titlepage}
+
+
+% Front matter: Project Summary, Intellectual Merit, Broader Impacts.
+\pagenumbering{arabic}
+\input{Chapters/summary.tex} 
+\pagebreak
+
+\pagestyle{fancy}
+\section{Overview and Objectives}\label{chapter: overview}
+\input{Chapters/overview.tex} 
+
+\pagestyle{fancy}
+\section{Expected Significance}\label{chapter: significance}
+\input{Chapters/significance.tex} 
+
+\pagestyle{fancy}
+\section{Literature Review}\label{chapter: review}
+\input{Chapters/literature review.tex} 
+
+\pagestyle{fancy}
+\section{Background}\label{chapter: content1}
+\input{Chapters/content1.tex} 
+
+\pagestyle{fancy}
+
+\pagestyle{fancy}
+\subsection{Control Structure Selection}\label{chapter: content2}
+\input{Chapters/content2.tex} 
+
+\pagestyle{fancy}
+\section{Preliminary Results}\label{chapter: results}
+\input{Chapters/results.tex}
+
+\pagestyle{fancy}
+\section{Research Plan}\label{chapter: plan}
+\input{Chapters/plan.tex}
+
+\pagestyle{fancy}
+\section{Timeline}\label{chapter: timeline}
+\input{Chapters/timeline.tex}
+
+
+\section*{References}
+\addcontentsline{toc}{chapter}{References}
+\printbibliography[heading=none]
+
+\end{document}

@@ -1,0 +1,44 @@
+\ProvidesPackage{drp_preamble}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}    % Add stylish qutoes from other authors mid-text.
+\usepackage{graphicx}    % Support for vectorized plots.
+\usepackage{chemformula} % Chemical formula subscripts using \ch{}.
+\usepackage[T1]{fontenc} % Use modern font encodings.
+\usepackage{lineno}      % Add line numbers if desired.
+\usepackage{amsmath}     % Math support from the American Mathematical Society
+\usepackage{amssymb}     % Math symbols support from American Mathematical Soc.
+\usepackage{amsfonts}    % Math fonts.
+\usepackage{amsthm}      % Add theorems (lemma-proof) mid-text.
+\usepackage{lipsum}      % Latim placeholders.
+
+\usepackage{subcaption,mwe} % Subcaptions
+\usepackage{algorithm}      % Pseudo-algorithms
+\usepackage{array}          % Matrices and arrays support.
+\usepackage{fancyhdr}       % Headers and footers.
+\usepackage{emptypage}      % Empty page (page break) preventing from havin footers.
+\usepackage{makecell}
+\usepackage{siunitx}       % Round signifcant figures to desired precision
+\sisetup{round-mode=places,round-precision=4}
+
+% Page layout that attains WVU requirements (also true for final PhD defense)
+\usepackage{algpseudocode}
+\usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
+\usepackage{setspace} 
+\usepackage[english]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage[
+    style= ieee,
+    backend = bibtex,
+    url=false,
+    sorting= none,
+    maxbibnames=99]{biblatex}
+
+\usepackage{bibentry}
+
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\newcommand\scalemath[2]{\scalebox{#1}{\mbox{\ensuremath{\displaystyle #2}}}}
